@@ -1,0 +1,29 @@
+{
+  "name": "local-lan-ipv4-address",
+  "version": "0.1.0",
+  "description": "local lan ipv4 address 本地局域网 ipv4 地址",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbm2001/local-lan-ipv4-address.git"
+  },
+  "keywords": [
+    "local",
+    "lan",
+    "ipv4",
+    "address",
+    "本地",
+    "局域网",
+    "ipv4",
+    "地址"
+  ],
+  "author": "zbm2001@aliyun.com",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/zbm2001/local-lan-ipv4-address/issues"
+  },
+  "homepage": "https://github.com/zbm2001/local-lan-ipv4-address#readme"
+}
