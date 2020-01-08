@@ -82,6 +82,8 @@ const os = require('os')
  *        internal: false } ] }
 */
 
+const regex = /^(?:192\.168|10|172\.(?:1[6-9]|2[0-9]|3[01]))\./
+
 /**
  * 在IP地址3种主要类型里，各保留了3个区域作为私有地址，其地址范围如下：
  * A类地址：10.0.0.0～10.255.255.255
@@ -92,9 +94,10 @@ const os = require('os')
  */
 module.exports = function localLANIPv4Address () {
   let address = '127.0.0.1'
-  Object.values(os.networkInterfaces()).some(eth => {
-    return eth.some(item => {
-      if (!item.internal && item.family === 'IPv4' && item.address.indexOf('10.') !== 0) {
+  const eths = os.networkInterfaces()
+  Object.values(eths).some(networks => {
+    return networks.some(item => {
+      if (!item.internal && item.family === 'IPv4' && regex.test(item.address)) {
         address = item.address
         return true
       }
