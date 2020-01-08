@@ -1,6 +1,6 @@
 {
   "name": "local-lan-ipv4-address",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "local lan ipv4 address 本地局域网 ipv4 地址",
   "main": "index.js",
   "scripts": {
